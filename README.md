@@ -77,7 +77,7 @@ If you want to test the model during the training step, please set `--train_eval
 
 ## Calculate FID 
 
-We provide the code to calculate the FID which is based on [rpo](https://github.com/mseitzer/pytorch-fid.git). We have pre-calculated the distribution of real images (all images are resized to 256*256 except cityscapes is 512*256) in training set of each dataset and saved them in `./datasets/train_mu_si/`. You can run the following command:
+We provide the code to calculate the FID which is based on [rpo](https://github.com/mseitzer/pytorch-fid.git). We have pre-calculated the distribution of real images (all images are resized to 256×256 except cityscapes is 512×256) in training set of each dataset and saved them in `./datasets/train_mu_si/`. You can run the following command:
 ```bash
 python fid_score.py [Path_to_real_image] [Path_to_fake_image] --batch-size 1 --gpu 0 --load_np_name [dataset] --resize [Size]
 ```
