@@ -1,6 +1,6 @@
 # Semantic Image Synthesis via Efficient Class-Adaptive Normalization
 ![Architecture](docs/SPADE-CLADE.png)
-### [Paper]()
+### [Paper](https://arxiv.org/pdf/2012.04644.pdf)
 
 [Zhentao Tan](https://scholar.google.com/citations?user=VCX7itEAAAAJ&hl=zh-CN&oi=ao), [Dongdong Chen](http://www.dongdongchen.bid/), [Qi Chu](https://scholar.google.com/citations?user=JZjOMdsAAAAJ&hl=en), [Menglei Chai](https://mlchai.com/), [Jing Liao](https://liaojing.github.io/html/index.html), [Mingming He](http://mingminghe.com/),  Lu Yuan, [Gang Hua](https://scholar.google.com/citations?user=7SgUlggAAAAJ&hl=zh-CN&oi=ao), [Nenghai Yu](https://scholar.google.com/citations?user=7620QAMAAAAJ&hl=zh-CN)
 
@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Dataset Preparation
 
-The Cityscapes, COCO-Stuff and ADE20K dataset can be download and prepared following [SPADE](https://github.com/NVlabs/SPADE.git). We provide the ADE20K-outdoor dataset selected by ourselves in [OneDrive]().
+The Cityscapes, COCO-Stuff and ADE20K dataset can be download and prepared following [SPADE](https://github.com/NVlabs/SPADE.git). We provide the ADE20K-outdoor dataset selected by ourselves in [OneDrive](https://mailustceducn-my.sharepoint.com/:u:/g/personal/tzt_mail_ustc_edu_cn/ERJWBXyAZW1FrJ0sXWQxm0cBjdqN3kgJXOtSuqRBTSktUw?e=fHuPrV).
 
 To make the distance mask which called intra-class positional encoding map in the paper, you can use the following commands:
 ```bash
@@ -34,7 +34,7 @@ By default, the distance mask is normalized. If you do not want it, please set `
 
 Once the dataset is ready, the result images can be generated using pretrained models.
 
-1. Download the pretrained models from the [OneDrive](), save it in `checkpoints/`. The structure is as follows:
+1. Download the pretrained models from the [OneDrive](https://mailustceducn-my.sharepoint.com/:u:/g/personal/tzt_mail_ustc_edu_cn/EU8LC9ElEmRIqpe__0GrD0gBRDKERkK6q-J-oI9k8GxHGA?e=tQ6zk4), save it in `checkpoints/`. The structure is as follows:
 ```bash
 ./checkpoints/
     ade20k/
@@ -107,6 +107,12 @@ If you use this code for your research, please cite our papers.
   title={Rethinking Spatially-Adaptive Normalization},
   author={Tan, Zhentao and Chen, Dongdong and Chu, Qi and Chai, Menglei and Liao, Jing and He, Mingming and Yuan, Lu and Yu, Nenghai},
   journal={arXiv preprint arXiv:2004.02867},
+  year={2020}
+}
+@article{tan2020semantic,
+  title={Semantic Image Synthesis via Efficient Class-Adaptive Normalization},
+  author={Tan, Zhentao and Chen, Dongdong and Chu, Qi and Chai, Menglei and Liao, Jing and He, Mingming and Yuan, Lu and Gang Hua and Yu, Nenghai},
+  journal={arXiv preprint arXiv:2012.04644},
   year={2020}
 }
 ```
