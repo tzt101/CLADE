@@ -70,8 +70,8 @@ python test.py --name [model_name] --norm_mode clade --batchSize 1 --gpu_ids 0 -
 You can train your own model with the following command:
 ```bash
 # To train CLADE and CLADE-ICPE.
-python train.py --name [experiment_name] --dataset_mode [dataset] --dataroot [Path_to_dataset]
-python train.py --name [experiment_name] --dataset_mode [dataset] --dataroot [Path_to_dataset] --add_dist
+python train.py --name [experiment_name] --dataset_mode [dataset] --norm_mode clade --dataroot [Path_to_dataset]
+python train.py --name [experiment_name] --dataset_mode [dataset] --norm_mode clade --dataroot [Path_to_dataset] --add_dist
 ```
 If you want to test the model during the training step, please set `--train_eval`. By default, the model every 10 epoch will be test in terms of FID. Finally, the model with best FID score will be saved as `best_net_G.pth`.
 
