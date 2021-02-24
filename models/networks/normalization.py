@@ -186,13 +186,21 @@ class ClassAffine(nn.Module):
         class_bias = torch.gather(bias2, 0, mask2).view(n, self.affine_nc, h, w)
         return class_weight, class_bias
 
+    def affine_einsum(self, mask):
+        class_weight = torch.einsum('ic,nihw->nchw', self.weight, mask)
+        class_bias = torch.einsum('ic,nihw->nchw', self.bias, mask)
+        return class_weight, class_bias
+
+    def affine_embed(self, mask):
+        arg_mask = torch.argmax(mask, 1).long() # [n, h, w]
+        class_weight = F.embedding(arg_mask, self.weight).permute(0, 3, 1, 2) # [n, c, h, w]
+        class_bias = F.embedding(arg_mask, self.bias).permute(0, 3, 1, 2) # [n, c, h, w]
+        return class_weight, class_bias
+
     def forward(self, input, mask, input_dist=None):
-        '''
-        This is one way to guided sample the weights though einsum function
-        # class_weight = torch.einsum('ic,nihw->nchw', self.weight, mask)
-        # class_bias = torch.einsum('ic,nihw->nchw', self.bias, mask)
-        '''
-        class_weight, class_bias = self.affine_gather(input, mask)
+        # class_weight, class_bias = self.affine_gather(input, mask)
+        # class_weight, class_bias = self.affine_einsum(mask) 
+        class_weight, class_bias = self.affine_embed(mask)
         if self.add_dist:
             input_dist = F.interpolate(input_dist, size=input.size()[2:], mode='nearest')
             class_weight = class_weight * (1 + self.dist_conv_w(input_dist))
