@@ -1,4 +1,4 @@
-# Semantic Image Synthesis via Efficient Class-Adaptive Normalization (Accpeted by TPAMI)
+# Semantic Image Synthesis via Efficient Class-Adaptive Normalization (Accepted by TPAMI)
 ![Architecture](docs/SPADE-CLADE.png)
 ### [Paper](https://arxiv.org/pdf/2012.04644.pdf)
 
