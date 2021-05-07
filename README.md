@@ -1,6 +1,6 @@
-# Semantic Image Synthesis via Efficient Class-Adaptive Normalization (Accepted by TPAMI)
+# Efficient Semantic Image Synthesis via Class-Adaptive Normalization (Accepted by TPAMI)
 ![Architecture](docs/SPADE-CLADE.png)
-### [Paper](https://arxiv.org/pdf/2012.04644.pdf)
+### [ArXiv Paper](https://arxiv.org/pdf/2012.04644.pdf)
 
 [Zhentao Tan](https://scholar.google.com/citations?user=VCX7itEAAAAJ&hl=zh-CN&oi=ao), [Dongdong Chen](http://www.dongdongchen.bid/), [Qi Chu](https://scholar.google.com/citations?user=JZjOMdsAAAAJ&hl=en), [Menglei Chai](https://mlchai.com/), [Jing Liao](https://liaojing.github.io/html/index.html), [Mingming He](http://mingminghe.com/),  Lu Yuan, [Gang Hua](https://scholar.google.com/citations?user=7SgUlggAAAAJ&hl=zh-CN&oi=ao), [Nenghai Yu](https://scholar.google.com/citations?user=7620QAMAAAAJ&hl=zh-CN)
 
@@ -103,6 +103,13 @@ The new options are as follows:
 ## Citation
 If you use this code for your research, please cite our papers.
 ```
+@article{tan2021efficient,
+  title={Efficient Semantic Image Synthesis via Class-Adaptive Normalization},
+  author={Tan, Zhentao and Chen, Dongdong and Chu, Qi and Chai, Menglei and Liao, Jing and He, Mingming and Yuan, Lu and Hua, Gang and Yu, Nenghai},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2021},
+  publisher={IEEE}
+}
 @article{tan2020rethinking,
   title={Rethinking Spatially-Adaptive Normalization},
   author={Tan, Zhentao and Chen, Dongdong and Chu, Qi and Chai, Menglei and Liao, Jing and He, Mingming and Yuan, Lu and Yu, Nenghai},
