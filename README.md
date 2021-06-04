@@ -26,7 +26,7 @@ The Cityscapes, COCO-Stuff and ADE20K dataset can be download and prepared follo
 
 To make the distance mask which called intra-class positional encoding map in the paper, you can use the following commands:
 ```bash
-python cal_dist_masks.py --path [Path_to_dataset] --dataset [ade20k | coco | cityscapes]
+python uitl/cal_dist_masks.py --path [Path_to_dataset] --dataset [ade20k | coco | cityscapes]
 ```
 By default, the distance mask is normalized. If you do not want it, please set `--norm no`.
 
